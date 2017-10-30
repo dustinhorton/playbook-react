@@ -1,0 +1,13 @@
+@mixin cols($cols: 2, $gutter: $gutter) {
+  column-count: $cols;
+  column-fill: balance-all;
+  column-gap: $gutter;
+}
+
+@mixin cols--item {
+  break-inside: avoid;
+
+  //@include vendor(ff) {
+  //  display: table;  // https://bugzilla.mozilla.org/show_bug.cgi?id=549114#c6
+  //}
+}

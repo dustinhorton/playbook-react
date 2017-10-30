@@ -1,0 +1,23 @@
+@mixin center($axis: both) {
+  @if $axis == x {
+    @include center---x;
+  } @else if $axis == y {
+    @include center---y;
+  } @else {
+    @include center---x;
+    @include center---y;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+@mixin center---x {
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+@mixin center---y {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}

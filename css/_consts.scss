@@ -1,0 +1,85 @@
+//  ----------------------------------------------------------------------
+//  BREAKPOINTS
+//  ----------------------------------------------------------------------
+
+$desktop:     1024px;
+$desktop---s: 980px;
+$tablet:      768px;
+$mobile:      568px;
+$mobile---m:  480px;
+$mobile---s:  320px;
+
+$bps---s:
+  desktop      $desktop,
+  desktop---s  $desktop---s,
+  tablet       $tablet,
+  mobile       $mobile,
+  mobile---m   $mobile---m,
+  mobile---s   $mobile---s;
+
+
+$hidpi: '-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi';
+
+
+
+
+//  ----------------------------------------------------------------------
+//  COLORS
+//  ----------------------------------------------------------------------
+
+// stylelint-disable color-no-hex
+$black: #000;
+$white: #fff;
+
+$facebook:  #3b5998;
+$google:    #ea4335;
+$pinterest: #bd081c;
+$twitter:   #1da1f3;
+// stylelint-enable color-no-hex
+
+
+
+
+//  ----------------------------------------------------------------------
+//  TYPOGRAPY
+//  ----------------------------------------------------------------------
+
+$font---fallback:
+  -apple-system,
+  blinkmacsystemfont,
+  segoe ui,
+  roboto,
+  helvetica neue,
+  arial,
+  sans-serif;
+
+
+//  WEIGHTS
+
+$ultra: 900;
+$xbold: 800;
+$sbold: 600;
+$med:   500;
+$lt:    300;
+$xlt:   200;
+$thin:  100;
+
+
+
+
+//  ----------------------------------------------------------------------
+//  LISTS
+//  ----------------------------------------------------------------------
+
+$prefixes:
+  webkit,
+  moz,
+  ms,
+  o;
+
+
+$socials---default:
+  facebook   $facebook,
+  google     $google,
+  pinterest  $pinterest,
+  twitter    $twitter;

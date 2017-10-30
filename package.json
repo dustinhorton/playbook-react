@@ -1,0 +1,23 @@
+{
+  "name": "playbook-react",
+  "version": "0.1.0",
+  "description": "CSS strategy for React",
+  "author": "Dustin Horton <d@dustinhorton.com> (http://dustinhorton.com)",
+  "license": "UNLICENSED",
+  "main" : "css/playbook.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dustinhorton/playbook.git"
+  },
+  "bugs": {
+    "email": "d@dustinhorton.com",
+    "url" : "https://github.com/dustinhorton/playbook/issues"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/stylelint 'css/**/*.scss' --fix"
+  },
+  "devDependencies": {
+    "stylelint": "^8.2.0",
+    "stylelint-config": "dustinhorton/stylelint-config"
+  }
+}

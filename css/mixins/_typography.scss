@@ -1,0 +1,61 @@
+@mixin caps($font-size: inherit, $letter-spacing: 0.1em, $line-height: inherit) {
+  @include type($font-size, $letter-spacing, $line-height);
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+@mixin font---icon {
+  font-family: $font---icon;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  text-rendering: auto;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+
+  @if $size != inherit and $size > $font-size---rem-min {
+    font-size: rem($size);
+  }
+}
+
+@mixin letter-spacing($num) {
+  letter-spacing: letter-spacing($num);
+}
+
+@mixin line-height($px) {
+  line-height: line-height($px);
+}
+
+@mixin text-break {
+  word-break: break-all;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  display: block;
+}
+
+@mixin type($font-size, $letter-spacing: 0, $line-height: inherit) {
+  @include font-size($font-size);
+
+  @if $letter-spacing != 0 {
+    @if unit($letter-spacing) == px {
+      letter-spacing: em($letter-spacing, $font-size);
+    } @else {
+      letter-spacing: $letter-spacing;
+    }
+  }
+
+  @if $line-height != inherit {
+    line-height: line-height($line-height, $font-size);
+  }
+}

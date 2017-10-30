@@ -1,0 +1,42 @@
+@mixin border-image($img, $border-w-x, $border-w-y: $border-w-x) {
+  border-image:
+    img-url($img)
+    strip-unit($border-w-x)
+    strip-unit($border-w-y)
+    repeat;
+}
+
+@mixin border-radius($side, $radius: $border-radius) {
+  @if $side == top or $side == bottom {
+    border-#{$side}-right-radius: $radius;
+    border-#{$side}-left-radius: $radius;
+  } @else if $side == right or $side == left {
+    border-top-#{$side}-radius: $radius;
+    border-bottom-#{$side}-radius: $radius;
+  }
+}
+
+@mixin margin($dir: 'x', $px: 0) {
+  @if $dir == x {
+    margin-right: $px;
+    margin-left:  $px;
+  } @else if $dir == y {
+    margin-top:    $px;
+    margin-bottom: $px;
+  }
+}
+
+@mixin padding($dir: 'x', $px: 0) {
+  @if $dir == x {
+    padding-right: $px;
+    padding-left:  $px;
+  } @else if $dir == y {
+    padding-top:    $px;
+    padding-bottom: $px;
+  }
+}
+
+@mixin transition($args...) {
+  transition: $duration $ease;
+  transition-property: $args;
+}

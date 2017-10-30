@@ -1,0 +1,22 @@
+@mixin mq-class($bp, $class) {
+  @media (max-width: $bp) {
+    @content;
+  }
+
+  .#{$class} & {
+    @content;
+  }
+}
+
+
+@mixin vendor($vendor) {
+  @if $vendor == webkit {
+    @media (-webkit-min-device-pixel-ratio: 0) {
+      @content;
+    }
+  } @else if $vendor == ff {
+    @-moz-document url-prefix() {
+      @content;
+    }
+  }
+}

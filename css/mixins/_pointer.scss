@@ -1,0 +1,57 @@
+@mixin pointer($side: top, $size: $pointer-size, $color: transparent, $alignment: center, $offset: $size * 1.5) {
+  position: relative;
+
+  &::after {
+    content: '';
+    border: $size transparent solid;
+    position: absolute;
+
+    @if $side == top or $side == bottom {
+      @include pointer-position($side: y, $size: $size);
+
+      @if $alignment == left {
+        margin-left: 0;
+        left: $offset;
+      } @else if $alignment == right {
+        margin-left: 0;
+        right: $offset;
+        left: auto;
+      }
+    } @else if $side == right or $side == left {
+      @include pointer-position($side: x, $size: $size);
+
+      @if $alignment == top {
+        margin-top: 0;
+        top: $offset;
+      } @else if $alignment == bottom {
+        margin-top: 0;
+        top: auto;
+        bottom: $offset;
+      }
+    }
+
+    @if $side == top {
+      border-bottom-color: $color;
+      bottom: 100%;
+    } @else if $side == right {
+      border-left-color: $color;
+      left: 100%;
+    } @else if $side == bottom {
+      border-top-color: $color;
+      top: 100%;
+    } @else if $side == left {
+      border-right-color: $color;
+      right: 100%;
+    }
+  }
+}
+
+@mixin pointer-position($side: 'y', $size: $pointer-size) {
+  @if $side == y {
+    margin: 0 0 0 (-$size);
+    left: 50%;
+  } @else if $side == x {
+    margin: -$size 0 0 0;
+    top: 50%;
+  }
+}

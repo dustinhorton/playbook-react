@@ -1,0 +1,18 @@
+@mixin list {
+  padding-left: $list-p;
+}
+
+@mixin list---alpha {
+  @include list;
+  list-style: lower-alpha;
+}
+
+@mixin list---bulleted {
+  @include list;
+  list-style: disc;
+}
+
+@mixin list---numbered {
+  @include list;
+  list-style: decimal;
+}

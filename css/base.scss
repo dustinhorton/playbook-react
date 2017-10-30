@@ -1,0 +1,158 @@
+@import 'reset';
+@import 'normalize';
+@import 'vars';
+
+
+* {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: $font;
+}
+
+body,
+button {
+  line-height: 1;
+}
+
+
+//  ----------------------------------------------------------------------
+//  BLOCK
+//  ----------------------------------------------------------------------
+
+html {
+  font-size: $font-size;
+
+  @if $scale-type {
+    @media (max-width: $tablet) { font-size: $font-size - 1; }
+    @media (max-width: $mobile) { font-size: $font-size - 2; }
+  }
+}
+
+body {
+  background: $body-bg;
+  color: $color;
+}
+
+p,
+blockquote {
+  line-height: $line-height;
+}
+
+p {
+  margin: 0 0 $block-m;
+}
+
+table {
+  width: 100%;
+}
+
+
+//  ----------------------------------------------------------------------
+//  FORM
+//  ----------------------------------------------------------------------
+
+button,
+input,
+textarea,
+select {
+  vertical-align: middle;
+}
+
+button,
+label[for],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  line-height: normal;
+}
+
+input,
+textarea {
+  line-height: normal;  // override reset
+
+  &::placeholder {
+    color: $placeholder;
+    text-overflow: ellipsis !important;
+  }
+}
+
+button {
+  * {  // stylelint-disable-line no-descending-specificity
+    pointer-events: none;
+  }
+}
+
+input {
+  &[type="checkbox"],
+  &[type="radio"] {
+    width: auto;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+select {
+  text-overflow: '';
+  text-indent: 1px;
+}
+
+
+//  ----------------------------------------------------------------------
+//  INLINE
+//  ----------------------------------------------------------------------
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+  vertical-align: middle;
+}
+
+
+
+
+//  ----------------------------------------------------------------------
+//  ATTRIBUTE
+//  ----------------------------------------------------------------------
+
+[disabled] {
+  &,
+  * {
+    cursor: default !important;
+    pointer-events: none;
+  }
+}
+
+
+
+
+//  ----------------------------------------------------------------------
+//  AT-RULES
+//  ----------------------------------------------------------------------
+
+@viewport {
+  width: device-width;
+  zoom: 1;
+  user-zoom: fixed;
+}

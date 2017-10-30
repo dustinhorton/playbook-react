@@ -1,0 +1,13 @@
+@mixin circle($size) {
+  @include size($size);
+  border-radius: 50%;
+}
+
+@mixin item-w($w: 25%, $gutter: $gutter) {
+  width: calc(#{$w} - #{$gutter});
+}
+
+@mixin size($w, $h: $w) {
+  width: $w;
+  height: $h;
+}

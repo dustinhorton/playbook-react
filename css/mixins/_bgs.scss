@@ -1,0 +1,13 @@
+@mixin bg-gradient($start, $end, $orientation: vertical) {
+  $orientation: if($orientation == vertical, to bottom, to right);
+  background: mix($start, $end);
+  background: linear-gradient($orientation, $start, $end);
+}
+
+@mixin bg-img($img, $color: transparent) {
+  @include hide-text;
+  width: width($img);
+  height: height($img);
+  background: img-url($img) center no-repeat $color;
+  display: inline-block;
+}

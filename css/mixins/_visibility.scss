@@ -1,0 +1,16 @@
+@mixin hide {
+  width: 1px !important;
+  height: 1px !important;
+  border: 0;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+@mixin hide-text {
+  overflow: hidden;
+  text-indent: 150%;
+  white-space: nowrap;
+}

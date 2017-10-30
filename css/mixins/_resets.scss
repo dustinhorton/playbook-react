@@ -1,0 +1,47 @@
+@mixin reset {
+  @include reset-type;
+  width: auto;
+  background: none;
+  border: 0;
+  float: none;
+  margin: 0;
+  padding: 0;
+  position: static;
+}
+
+@mixin reset-m($axis: y) {
+  @if $axis = y {
+    &:first-child { margin-top:    0; }
+    &:last-child  { margin-bottom: 0; }
+  } @else {
+    &:first-child { margin-left:  0; }
+    &:last-child  { margin-right: 0; }
+  }
+}
+
+@mixin reset-p($axis: y) {
+  @if $axis = y {
+    &:first-child { padding-top:    0; }
+    &:last-child  { padding-bottom: 0; }
+  } @else {
+    &:first-child { padding-left:  0; }
+    &:last-child  { padding-right: 0; }
+  }
+}
+
+@mixin reset-type {
+  color: $color;
+  font-family: $font;
+  font-size: $font-size;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: $line-height;
+  text-transform: none;
+}
+
+@mixin reset-type---heading {
+  @include reset-type;
+  font-weight: $h-font-weight;
+  line-height: 1;
+  margin-bottom: 0;
+}
