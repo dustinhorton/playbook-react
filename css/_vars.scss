@@ -16,7 +16,7 @@ $ease: ease-in-out !default;
 //  BREAKPOINTS
 //  ----------------------------------------------------------------------
 
-$full:    1200px;
+$full:    1200px !default;
 $gt-full: $full + 1;
 $lt-full: $full - 1;
 
