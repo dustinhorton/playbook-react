@@ -70,6 +70,25 @@ $socials: $socials---default !default;
 
 
 //  ----------------------------------------------------------------------
+//  PROPERTIES
+//  ----------------------------------------------------------------------
+
+$border-color: $black !default;
+$border-w: 1px !default;
+$border: $border-w $border-color solid !default;
+
+$color: $black !default;
+
+$font: $font---fallback !default;
+
+$font-size: 16px !default;
+
+$line-height: 1.35 !default;
+
+
+
+
+//  ----------------------------------------------------------------------
 //  TYPOGRAPHY
 //  ----------------------------------------------------------------------
 
@@ -77,17 +96,9 @@ $scale-type: true !default;
 
 $webfonts: () !default;
 
-
-$color: $black !default;
-
-$font:        $font---fallback !default;
 $font---icon: '' !default;
 
-$font-size:           16px !default;
 $font-size---rem-min: 12px !default;
-
-$line-height: 1.35 !default;
-
 
 $h-font-weight: normal !default;
 
