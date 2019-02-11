@@ -1,0 +1,36 @@
+@mixin variants---list($property, $variants, $prefix: '') {
+  @each $variant in $variants {
+    $selector: $variant;
+
+    @if ($prefix != '') {
+      $selector: #{$prefix}---#{$variant};
+    }
+
+    &---#{$selector} {
+      #{$property}: $variant;
+    }
+  }
+}
+
+@mixin variants---map($property, $variants, $prefix: '') {
+  @each $name, $value in $variants {
+    $selector: $name;
+
+    @if ($prefix != '') {
+      $selector: #{$prefix}---#{$name};
+    }
+
+    &---#{$selector} {
+      #{$property}: $value;
+    }
+  }
+}
+
+@mixin text-align-variants {
+  $alignments:
+    left,
+    center,
+    right;
+
+  @include variants---list(text-align, $alignments);
+}

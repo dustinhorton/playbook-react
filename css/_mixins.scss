@@ -8,7 +8,14 @@
 @import 'mixins/resets';
 @import 'mixins/sizes';
 @import 'mixins/typography';
+@import 'mixins/variants';
 @import 'mixins/visibility';
+
+
+@mixin button-link---full {
+  width: 100%;
+  display: block;
+}
 
 
 @mixin cf {
@@ -20,15 +27,6 @@
 
   &::after {
     clear: both;
-  }
-}
-
-
-@mixin modifiers($property, $list) {
-  @each $name, $var in $list {
-    &---#{$name} {
-      #{$property}: $var;
-    }
   }
 }
 
