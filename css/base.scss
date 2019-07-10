@@ -23,7 +23,6 @@ button {
 
 html {
   font-size: $font-size;
-  scroll-behavior: smooth;
 
   @if $scale-type {
     @media (max-width: $tablet) { font-size: $font-size - 1; }
