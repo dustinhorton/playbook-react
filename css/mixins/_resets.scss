@@ -10,7 +10,7 @@
 }
 
 @mixin reset-m($axis: y) {
-  @if $axis = y {
+  @if $axis == y {
     &:first-child { margin-top:    0; }
     &:last-child  { margin-bottom: 0; }
   } @else {
@@ -20,7 +20,7 @@
 }
 
 @mixin reset-p($axis: y) {
-  @if $axis = y {
+  @if $axis == y {
     &:first-child { padding-top:    0; }
     &:last-child  { padding-bottom: 0; }
   } @else {
