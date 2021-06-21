@@ -1,16 +1,18 @@
+@use "sass:math";
+
 @function em($px, $font-size: $font-size) {
-  @return $px / $font-size * 1em;
+  @return math.div($px, $font-size) * 1em;
 }
 
 @function percent($target, $context: $full) {
-  @return $target / $context * 100%;
+  @return math.div($target, $context) * 100%;
 }
 
 @function rem($px) {
-  @return $px / $font-size * 1rem;
+  @return math.div($px, $font-size) * 1rem;
 }
 
 
 @function strip-unit($val) {
-  @return $val / ($val * 0 + 1);
+  @return math.div($val, $val * 0 + 1);
 }

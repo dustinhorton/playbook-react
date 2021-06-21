@@ -1,7 +1,9 @@
+@use "sass:math";
+
 @function letter-spacing($num) {
-  @return ($num / 1000) * 1em;
+  @return ($num * 0.001) * 1em;
 }
 
 @function line-height($px, $font-size: $font-size) {
-  @return $px / $font-size;
+  @return math.div($px, $font-size);
 }
