@@ -21,11 +21,11 @@ $full:    1200px !default;
 $gt-full: $full + 1;
 $lt-full: $full - 1;
 
-$bps---l:
-  full     $full,
-  lt-full  $lt-full;
+$breakpoints---large:
+  full    $full,
+  lt-full $lt-full;
 
-$bps: append($bps---l, $bps---s) !default;
+$breakpoints: append($breakpoints---large, $breakpoints---small) !default;
 
 
 
@@ -75,14 +75,18 @@ $socials: $socials---default !default;
 //  ----------------------------------------------------------------------
 
 $border-color: $black !default;
-$border-w: 1px !default;
-$border: $border-w $border-color solid !default;
+$border-width: 1px !default;
+$border: $border-width $border-color solid !default;
 
 $color: $black !default;
 
 $font: $font---fallback !default;
 
 $font-size: 16px !default;
+
+$font-weight: normal !default;
+
+$letter-spacing: 0 !default;
 
 $line-height: 1.35 !default;
 

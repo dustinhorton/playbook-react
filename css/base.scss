@@ -9,6 +9,8 @@ input,
 textarea,
 select {
   font-family: $font;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
 }
 
 body,
@@ -87,6 +89,8 @@ textarea {
 }
 
 button {
+  user-select: none;
+
   * {  // stylelint-disable-line no-descending-specificity
     pointer-events: none;
   }

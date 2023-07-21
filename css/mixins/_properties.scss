@@ -16,6 +16,10 @@
   }
 }
 
+@mixin border-radius-inner($radius-outer, $gap) {
+  border-radius: $radius-outer - $gap;
+}
+
 @mixin margin($dir: 'x', $px: 0) {
   @if $dir == x {
     margin-right: $px;

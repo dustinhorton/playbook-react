@@ -2,20 +2,23 @@
 //  BREAKPOINTS
 //  ----------------------------------------------------------------------
 
-$desktop:     1024px;
-$desktop---s: 980px;
-$tablet:      768px;
-$mobile:      568px;
-$mobile---m:  480px;
-$mobile---s:  320px;
+$desktop---large: 1200px;
+$desktop:         1024px;
+$desktop---small:  980px;
+$tablet:           768px;
+$mobile:           568px;
+$mobile---medium:  480px;
+$mobile---small:   320px;
 
-$bps---s:
-  desktop      $desktop,
-  desktop---s  $desktop---s,
-  tablet       $tablet,
-  mobile       $mobile,
-  mobile---m   $mobile---m,
-  mobile---s   $mobile---s;
+$gt-mobile: $mobile + 1;
+
+$breakpoints---small:
+  desktop         $desktop,
+  desktop---small $desktop---small,
+  tablet          $tablet,
+  mobile          $mobile,
+  mobile---medium $mobile---medium,
+  mobile---small  $mobile---small;
 
 
 $hidpi: '-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi';
@@ -31,10 +34,10 @@ $hidpi: '-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi';
 $black: #000;
 $white: #fff;
 
-$facebook:  #3b5998;
-$google:    #ea4335;
-$pinterest: #bd081c;
-$twitter:   #1da1f3;
+$facebook: #1877f2;
+$google:   #ea4335;
+$twitter:  #1d9bf0;
+$zoom:     #0b5cff;
 // stylelint-enable color-no-hex
 
 
@@ -56,13 +59,18 @@ $font---fallback:
 
 //  WEIGHTS
 
-$ultra: 900;
-$xbold: 800;
-$sbold: 600;
-$med:   500;
-$lt:    300;
-$xlt:   200;
-$thin:  100;
+$font-weight---black:    900;
+$font-weight---thin:     100;
+
+$font-weight---xxbold:   $font-weight---black;
+$font-weight---xbold:    800;
+$font-weight---bold:     700;
+$font-weight---semibold: 600;
+$font-weight---medium:   500;
+$font-weight---normal:   400;
+$font-weight---light:    300;
+$font-weight---xlight:   200;
+$font-weight---xxlight:  $font-weight---thin;
 
 
 
